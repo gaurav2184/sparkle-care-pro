@@ -5,6 +5,7 @@ import { ServicesGrid } from "@/components/sections/ServicesGrid";
 import { WhyUs } from "@/components/sections/WhyUs";
 import { Process } from "@/components/sections/Process";
 import { TestimonialsSection } from "@/components/sections/Testimonials";
+import { FAQSection } from "@/components/sections/FAQSection";
 import { CTA } from "@/components/sections/CTA";
 
 const Index = () => (
@@ -15,6 +16,7 @@ const Index = () => (
     <WhyUs />
     <Process />
     <TestimonialsSection />
+    <FAQSection />
     <CTA />
   </PageLayout>
 );
