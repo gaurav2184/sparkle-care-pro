@@ -13,7 +13,7 @@ export const Footer = () => (
           <img src={logo} alt="TDS Trushna Disinfecting Services logo" className="h-14 w-auto" loading="lazy" />
         </div>
         <p className="text-sm opacity-80 leading-relaxed">
-          Bhubaneswar's trusted experts in pest control & disinfection. Backed by a 5-year service warranty.
+          Berhampur's trusted experts in pest control & disinfection. Backed by a 5-year service warranty.
         </p>
         <div className="flex gap-3 mt-6">
           {[Facebook, Instagram, Linkedin].map((Icon, i) => (
@@ -52,7 +52,7 @@ export const Footer = () => (
         <ul className="space-y-3 text-sm opacity-80">
           <li className="flex items-start gap-3"><Phone className="h-4 w-4 mt-0.5 text-secondary" /> +91 73812 14444</li>
           <li className="flex items-start gap-3"><Mail className="h-4 w-4 mt-0.5 text-secondary" /> trushnaventures@gmail.com</li>
-          <li className="flex items-start gap-3"><MapPin className="h-4 w-4 mt-0.5 text-secondary" /> Bhubaneswar, Odisha, India</li>
+          <li className="flex items-start gap-3"><MapPin className="h-4 w-4 mt-0.5 text-secondary" /> Berhampur, Odisha, India</li>
         </ul>
       </div>
     </div>
@@ -60,7 +60,7 @@ export const Footer = () => (
     <div className="border-t border-white/10">
       <div className="container py-5 flex flex-col sm:flex-row gap-2 items-center justify-between text-xs opacity-70">
         <p>© {new Date().getFullYear()} Trushna Disinfection Services. All rights reserved.</p>
-        <p>Crafted with care in Bhubaneswar.</p>
+        <p>Crafted with care in Berhampur.</p>
       </div>
     </div>
   </footer>

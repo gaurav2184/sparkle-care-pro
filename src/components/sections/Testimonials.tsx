@@ -5,7 +5,7 @@ export const testimonials = [
   { name: "Priya Mohanty", role: "Homeowner, Patia", text: "Cockroaches were ruining our kitchen. After TDS's gel treatment, we haven't seen a single one in 8 months. Truly worth it.", rating: 5 },
   { name: "Rohit Patnaik", role: "Operations, Café Bay", text: "We needed weekly disinfection during the monsoon. TDS was always on time and the team is super professional. Fantastic service.", rating: 5 },
   { name: "Anjali Das", role: "Mother of two, Jaydev Vihar", text: "What I loved most was the eco-friendly approach — safe for my kids and pets. The mosquito treatment changed our evenings!", rating: 5 },
-  { name: "Sourav Mishra", role: "Builder, Bhubaneswar", text: "Pre-construction termite treatment with a 5-year warranty? Nobody else offered that. TDS is now our default partner.", rating: 5 },
+  { name: "Sourav Mishra", role: "Builder, Berhampur", text: "Pre-construction termite treatment with a 5-year warranty? Nobody else offered that. TDS is now our default partner.", rating: 5 },
   { name: "Dr. Meera Sahu", role: "Clinic Owner", text: "Hospital-grade fogging done right. The team understood the medical-environment requirements perfectly.", rating: 5 },
   { name: "Kunal Behera", role: "IT Manager", text: "Got our 50-seater office sanitised in under 3 hours. Fully transparent pricing, zero hidden fees.", rating: 5 },
 ];

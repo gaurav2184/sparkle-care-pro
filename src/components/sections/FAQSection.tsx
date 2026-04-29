@@ -9,7 +9,7 @@ const faqs = [
   { q: "What does the 5-year warranty cover?", a: "Our 5-year warranty applies to termite and select disinfection treatments. If pests reappear within the warranty period, we'll re-treat the affected areas at no additional cost." },
   { q: "How long does a typical service take?", a: "Most residential treatments take 45 minutes to 2 hours. Commercial spaces and termite treatments may take longer depending on the area." },
   { q: "Do I need to vacate my home during treatment?", a: "For most general pest control, no. For fumigation or heavy fogging, we recommend stepping out for 2–4 hours. We'll advise based on your specific service." },
-  { q: "Which areas do you service?", a: "We currently service Bhubaneswar, Cuttack and surrounding areas of Odisha. Contact us for special service to other locations." },
+  { q: "Which areas do you service?", a: "We currently service Berhampur, Ganjam and surrounding areas of Odisha. Contact us for special service to other locations." },
 ];
 
 export const FAQSection = () => (

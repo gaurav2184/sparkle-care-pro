@@ -34,7 +34,7 @@ export const Hero = () => {
             initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.15 }}
             className="mt-6 text-lg text-muted-foreground max-w-xl leading-relaxed"
           >
-            Trushna Disinfection Services delivers professional pest control & hospital-grade sanitization across Bhubaneswar — backed by an industry-leading 5-year warranty.
+            Trushna Disinfection Services delivers professional pest control & hospital-grade sanitization across Berhampur — backed by an industry-leading 5-year warranty.
           </motion.p>
 
           <motion.div

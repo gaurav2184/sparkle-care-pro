@@ -54,7 +54,7 @@ const Contact = () => {
             {[
               { Icon: Phone, label: "Phone", val: "+91 73812 14444" },
               { Icon: Mail, label: "Email", val: "trushnaventures@gmail.com" },
-              { Icon: MapPin, label: "Location", val: "Bhubaneswar, Odisha, India" },
+              { Icon: MapPin, label: "Location", val: "Berhampur, Odisha, India" },
               { Icon: Clock, label: "Hours", val: "Mon–Sat, 8 AM – 8 PM" },
             ].map(({ Icon, label, val }) => (
               <div key={label} className="flex items-start gap-4 p-4 rounded-2xl bg-card border border-border">
