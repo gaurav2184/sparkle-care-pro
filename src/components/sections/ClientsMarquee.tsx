@@ -1,4 +1,13 @@
-const clients = ["TATA", "Reliance", "Apollo", "DLF", "ITC Hotels", "Café Bay", "Greenwood School", "Lulu Mall", "AIIMS", "BMC"];
+const clients = [
+  "Tata Power",
+  "Swosti Resorts",
+  "Deepak Fertilizers",
+  "SBI",
+  "DCB Bank",
+  "HDFC Bank",
+  "IOCL",
+  "TPSODL",
+];
 
 export const ClientsMarquee = () => (
   <section className="py-14 border-y border-border bg-card overflow-hidden">
