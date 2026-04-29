@@ -36,12 +36,8 @@ export const Navbar = () => {
       )}
     >
       <nav className="container flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-3 group">
-          <img src={logo} alt="TDS Trushna Disinfection Services logo" className="h-11 w-11 transition-transform group-hover:scale-110" width={44} height={44} />
-          <div className="leading-tight">
-            <div className="font-display font-extrabold text-lg text-primary">TDS</div>
-            <div className="text-[10px] tracking-widest uppercase text-muted-foreground hidden sm:block">Trushna Disinfection</div>
-          </div>
+        <Link to="/" className="flex items-center group">
+          <img src={logo} alt="TDS Trushna Disinfecting Services logo" className="h-12 md:h-14 w-auto transition-transform group-hover:scale-105" />
         </Link>
 
         <div className="hidden lg:flex items-center gap-1">
@@ -68,9 +64,9 @@ export const Navbar = () => {
         </div>
 
         <div className="hidden lg:flex items-center gap-3">
-          <a href="tel:+919999999999" className="flex items-center gap-2 text-sm font-medium text-primary">
+          <a href="tel:+917381214444" className="flex items-center gap-2 text-sm font-medium text-primary">
             <Phone className="h-4 w-4" />
-            +91 99999 99999
+            +91 73812 14444
           </a>
           <Button asChild variant="hero" size="sm">
             <Link to="/quote">Get Quote</Link>

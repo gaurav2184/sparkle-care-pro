@@ -9,12 +9,8 @@ export const Footer = () => (
 
     <div className="container relative py-16 grid gap-12 lg:grid-cols-4">
       <div>
-        <div className="flex items-center gap-3 mb-4">
-          <img src={logo} alt="TDS logo" className="h-12 w-12 bg-white rounded-xl p-1" width={48} height={48} loading="lazy" />
-          <div>
-            <div className="font-display font-extrabold">TDS</div>
-            <div className="text-xs opacity-70">Trushna Disinfection Services</div>
-          </div>
+        <div className="bg-white rounded-xl p-3 inline-block mb-4">
+          <img src={logo} alt="TDS Trushna Disinfecting Services logo" className="h-14 w-auto" loading="lazy" />
         </div>
         <p className="text-sm opacity-80 leading-relaxed">
           Bhubaneswar's trusted experts in pest control & disinfection. Backed by a 5-year service warranty.
@@ -54,8 +50,8 @@ export const Footer = () => (
       <div>
         <h4 className="font-semibold mb-4">Get in Touch</h4>
         <ul className="space-y-3 text-sm opacity-80">
-          <li className="flex items-start gap-3"><Phone className="h-4 w-4 mt-0.5 text-secondary" /> +91 99999 99999</li>
-          <li className="flex items-start gap-3"><Mail className="h-4 w-4 mt-0.5 text-secondary" /> hello@tdsdisinfection.in</li>
+          <li className="flex items-start gap-3"><Phone className="h-4 w-4 mt-0.5 text-secondary" /> +91 73812 14444</li>
+          <li className="flex items-start gap-3"><Mail className="h-4 w-4 mt-0.5 text-secondary" /> trushnaventures@gmail.com</li>
           <li className="flex items-start gap-3"><MapPin className="h-4 w-4 mt-0.5 text-secondary" /> Bhubaneswar, Odisha, India</li>
         </ul>
       </div>
