@@ -12,7 +12,7 @@ export const CTA = () => (
           Ready for a pest-free, sanitised space?
         </h2>
         <p className="text-lg opacity-90 mb-8">
-          Get a free, no-obligation quote in under 2 minutes. Same-day appointments available across Berhampur.
+          Get a free, no-obligation quote and on-site visit in under 2 minutes. Same-day appointments available across Odisha.
         </p>
         <div className="flex flex-wrap gap-4 justify-center">
           <Button asChild variant="glass" size="lg">
