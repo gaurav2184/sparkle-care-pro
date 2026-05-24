@@ -50,6 +50,7 @@ export default {
         "mist-drift": { "0%": { transform: "translateX(-10%) translateY(0)", opacity: "0.4" }, "50%": { opacity: "0.7" }, "100%": { transform: "translateX(10%) translateY(-20px)", opacity: "0.4" } },
         "shield-pulse": { "0%,100%": { transform: "scale(1)" }, "50%": { transform: "scale(1.04)" } },
         "marquee": { "0%": { transform: "translateX(0)" }, "100%": { transform: "translateX(-50%)" } },
+        "marquee-fast": { "0%": { transform: "translateX(0)" }, "100%": { transform: "translateX(-50%)" } },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -61,6 +62,7 @@ export default {
         "mist-drift": "mist-drift 9s ease-in-out infinite",
         "shield-pulse": "shield-pulse 3s ease-in-out infinite",
         "marquee": "marquee 30s linear infinite",
+        "marquee-fast": "marquee-fast 18s linear infinite",
       },
     },
   },
