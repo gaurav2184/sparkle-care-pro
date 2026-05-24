@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
-import { Mail, MapPin, Phone, ShieldCheck, Facebook, Instagram, Linkedin } from "lucide-react";
+import { Mail, MapPin, Phone, ShieldCheck, Facebook, Instagram, Linkedin, Star } from "lucide-react";
 import logo from "@/assets/tds-logo.png";
+import { siteConfig } from "@/lib/config";
 
 export const Footer = () => (
   <footer className="relative mt-24 bg-primary text-primary-foreground overflow-hidden">
@@ -10,17 +11,27 @@ export const Footer = () => (
     <div className="container relative py-16 grid gap-12 lg:grid-cols-4">
       <div>
         <div className="bg-white rounded-xl p-3 inline-block mb-4">
-          <img src={logo} alt="TDS Trushna Disinfecting Services logo" className="h-14 w-auto" loading="lazy" />
+          <img src={logo} alt="Trushna Disinfection Services logo" className="h-20 w-auto" loading="lazy" />
         </div>
         <p className="text-sm opacity-80 leading-relaxed">
-          Berhampur's trusted experts in pest control & disinfection. Backed by a 5-year service warranty.
+          {siteConfig.serviceArea} — your trusted experts in professional pest control & hospital-grade disinfection. ISO 9001:2015 certified.
         </p>
-        <div className="flex gap-3 mt-6">
-          {[Facebook, Instagram, Linkedin].map((Icon, i) => (
-            <a key={i} href="#" className="h-9 w-9 grid place-items-center rounded-full bg-white/10 hover:bg-secondary hover:text-primary transition-colors">
-              <Icon className="h-4 w-4" />
-            </a>
-          ))}
+        <div className="flex flex-wrap gap-3 mt-6">
+          <a href={siteConfig.social.facebook} aria-label="Facebook" className="h-9 w-9 grid place-items-center rounded-full bg-white/10 hover:bg-secondary hover:text-primary transition-colors">
+            <Facebook className="h-4 w-4" />
+          </a>
+          <a href={siteConfig.social.instagram} aria-label="Instagram" className="h-9 w-9 grid place-items-center rounded-full bg-white/10 hover:bg-secondary hover:text-primary transition-colors">
+            <Instagram className="h-4 w-4" />
+          </a>
+          <a href={siteConfig.social.linkedin} aria-label="LinkedIn" className="h-9 w-9 grid place-items-center rounded-full bg-white/10 hover:bg-secondary hover:text-primary transition-colors">
+            <Linkedin className="h-4 w-4" />
+          </a>
+          <a href={siteConfig.social.justdial} target="_blank" rel="noopener noreferrer" aria-label="Justdial" className="h-9 px-3 grid place-items-center rounded-full bg-white/10 hover:bg-secondary hover:text-primary transition-colors text-xs font-bold">
+            Justdial
+          </a>
+          <a href={siteConfig.social.google} target="_blank" rel="noopener noreferrer" aria-label="Google Reviews" className="h-9 px-3 inline-flex items-center gap-1 rounded-full bg-white/10 hover:bg-secondary hover:text-primary transition-colors text-xs font-bold">
+            <Star className="h-3 w-3" /> Google
+          </a>
         </div>
       </div>
 
@@ -50,17 +61,23 @@ export const Footer = () => (
       <div>
         <h4 className="font-semibold mb-4">Get in Touch</h4>
         <ul className="space-y-3 text-sm opacity-80">
-          <li className="flex items-start gap-3"><Phone className="h-4 w-4 mt-0.5 text-secondary" /> +91 73812 14444</li>
-          <li className="flex items-start gap-3"><Mail className="h-4 w-4 mt-0.5 text-secondary" /> trushnaventures@gmail.com</li>
-          <li className="flex items-start gap-3"><MapPin className="h-4 w-4 mt-0.5 text-secondary" /> Berhampur, Odisha, India</li>
+          <li className="flex items-start gap-3"><Phone className="h-4 w-4 mt-0.5 text-secondary shrink-0" /> {siteConfig.phone}</li>
+          <li className="flex items-start gap-3"><Mail className="h-4 w-4 mt-0.5 text-secondary shrink-0" /> {siteConfig.email}</li>
+          <li className="flex items-start gap-3">
+            <MapPin className="h-4 w-4 mt-0.5 text-secondary shrink-0" />
+            <span>
+              {siteConfig.address.line2}<br />
+              {siteConfig.address.city} – {siteConfig.address.pincode}, {siteConfig.address.state}
+            </span>
+          </li>
         </ul>
       </div>
     </div>
 
     <div className="border-t border-white/10">
       <div className="container py-5 flex flex-col sm:flex-row gap-2 items-center justify-between text-xs opacity-70">
-        <p>© {new Date().getFullYear()} Trushna Disinfection Services. All rights reserved.</p>
-        <p>Crafted with care in Berhampur.</p>
+        <p>© {new Date().getFullYear()} {siteConfig.name}. All rights reserved.</p>
+        <p>Serving {siteConfig.serviceArea.toLowerCase()}.</p>
       </div>
     </div>
   </footer>
