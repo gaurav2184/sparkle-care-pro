@@ -29,7 +29,7 @@ export const ServicesGrid = ({ limit }: { limit?: number }) => {
             transition={{ duration: 0.5, delay: i * 0.05 }}
           >
             <Link
-              to="/services"
+              to={`/services/${s.slug}`}
               className="group block h-full p-6 rounded-2xl gradient-card border border-border hover:border-primary/30 hover:shadow-elegant transition-all duration-500 hover:-translate-y-1"
             >
               <div className="h-12 w-12 rounded-xl gradient-accent grid place-items-center mb-5 group-hover:animate-shield-pulse">
