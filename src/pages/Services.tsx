@@ -13,7 +13,7 @@ const Services = () => (
         Complete protection, <span className="text-gradient">delivered with care.</span>
       </h1>
       <p className="text-muted-foreground mt-5 max-w-2xl mx-auto text-lg">
-        Residential & commercial pest control plus hospital-grade disinfection — every service backed by our 5-year warranty.
+        Residential & commercial pest control plus hospital-grade disinfection — serving across Odisha, with a 5-year warranty on anti-termite treatment.
       </p>
     </section>
 
