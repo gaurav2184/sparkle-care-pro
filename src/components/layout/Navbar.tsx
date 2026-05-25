@@ -4,6 +4,7 @@ import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import logo from "@/assets/tds-logo.png";
+import { config } from "@/lib/config";
 
 const links = [
   { to: "/", label: "Home" },
@@ -32,12 +33,19 @@ export const Navbar = () => {
     <header
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-all duration-500",
-        scrolled ? "glass shadow-soft py-2" : "bg-transparent py-4"
+        scrolled ? "glass shadow-soft py-1.5" : "bg-white/80 backdrop-blur-sm py-2"
       )}
     >
       <nav className="container flex items-center justify-between">
         <Link to="/" className="flex items-center group">
-          <img src={logo} alt="TDS Trushna Disinfecting Services logo" className="h-12 md:h-14 w-auto transition-transform group-hover:scale-105" />
+          <img
+            src={logo}
+            alt="Trushna Disinfection Services logo"
+            className={cn(
+              "w-auto transition-all group-hover:scale-105",
+              scrolled ? "h-12 md:h-14" : "h-16 md:h-20",
+            )}
+          />
         </Link>
 
         <div className="hidden lg:flex items-center gap-1">
@@ -64,9 +72,9 @@ export const Navbar = () => {
         </div>
 
         <div className="hidden lg:flex items-center gap-3">
-          <a href="tel:+917381214444" className="flex items-center gap-2 text-sm font-medium text-primary">
+          <a href={`tel:${config.phone}`} className="flex items-center gap-2 text-sm font-medium text-primary">
             <Phone className="h-4 w-4" />
-            +91 73812 14444
+            {config.phoneDisplay}
           </a>
           <Button asChild variant="hero" size="sm">
             <Link to="/quote">Get Quote</Link>

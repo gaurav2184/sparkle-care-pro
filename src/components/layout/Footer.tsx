@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
-import { Mail, MapPin, Phone, ShieldCheck, Facebook, Instagram, Linkedin } from "lucide-react";
+import { Mail, MapPin, Phone, ShieldCheck, Facebook, Instagram, Linkedin, Star } from "lucide-react";
 import logo from "@/assets/tds-logo.png";
+import { config } from "@/lib/config";
 
 export const Footer = () => (
   <footer className="relative mt-24 bg-primary text-primary-foreground overflow-hidden">
@@ -10,14 +11,26 @@ export const Footer = () => (
     <div className="container relative py-16 grid gap-12 lg:grid-cols-4">
       <div>
         <div className="bg-white rounded-xl p-3 inline-block mb-4">
-          <img src={logo} alt="TDS Trushna Disinfecting Services logo" className="h-14 w-auto" loading="lazy" />
+          <img src={logo} alt="Trushna Disinfection Services logo" className="h-20 w-auto" loading="lazy" />
         </div>
         <p className="text-sm opacity-80 leading-relaxed">
-          Berhampur's trusted experts in pest control & disinfection. Backed by a 5-year service warranty.
+          Trusted experts in pest control & disinfection across Odisha. Anti-termite treatment backed by a 5-year service warranty.
         </p>
-        <div className="flex gap-3 mt-6">
-          {[Facebook, Instagram, Linkedin].map((Icon, i) => (
-            <a key={i} href="#" className="h-9 w-9 grid place-items-center rounded-full bg-white/10 hover:bg-secondary hover:text-primary transition-colors">
+        <div className="flex flex-wrap gap-3 mt-6">
+          {[
+            { Icon: Facebook, href: config.social.facebook, label: "Facebook" },
+            { Icon: Instagram, href: config.social.instagram, label: "Instagram" },
+            { Icon: Linkedin, href: config.social.linkedin, label: "LinkedIn" },
+            { Icon: Star, href: config.social.justdial, label: "Justdial" },
+          ].map(({ Icon, href, label }) => (
+            <a
+              key={label}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={label}
+              className="h-9 w-9 grid place-items-center rounded-full bg-white/10 hover:bg-secondary hover:text-primary transition-colors"
+            >
               <Icon className="h-4 w-4" />
             </a>
           ))}
@@ -43,16 +56,16 @@ export const Footer = () => (
           <li><Link to="/privacy" className="hover:text-secondary">Privacy Policy</Link></li>
         </ul>
         <div className="mt-6 inline-flex items-center gap-2 text-xs px-3 py-2 rounded-full bg-secondary text-primary font-semibold">
-          <ShieldCheck className="h-4 w-4" /> 5-Year Service Warranty
+          <ShieldCheck className="h-4 w-4" /> 5-Year Warranty on Anti-Termite
         </div>
       </div>
 
       <div>
         <h4 className="font-semibold mb-4">Get in Touch</h4>
         <ul className="space-y-3 text-sm opacity-80">
-          <li className="flex items-start gap-3"><Phone className="h-4 w-4 mt-0.5 text-secondary" /> +91 73812 14444</li>
-          <li className="flex items-start gap-3"><Mail className="h-4 w-4 mt-0.5 text-secondary" /> trushnaventures@gmail.com</li>
-          <li className="flex items-start gap-3"><MapPin className="h-4 w-4 mt-0.5 text-secondary" /> Berhampur, Odisha, India</li>
+          <li className="flex items-start gap-3"><Phone className="h-4 w-4 mt-0.5 text-secondary" /> <a href={`tel:${config.phone}`}>{config.phoneDisplay}</a></li>
+          <li className="flex items-start gap-3"><Mail className="h-4 w-4 mt-0.5 text-secondary" /> <a href={`mailto:${config.email}`} className="break-all">{config.email}</a></li>
+          <li className="flex items-start gap-3"><MapPin className="h-4 w-4 mt-0.5 text-secondary" /> <span>{config.address.line1}<br />{config.address.line2}</span></li>
         </ul>
       </div>
     </div>
@@ -60,7 +73,7 @@ export const Footer = () => (
     <div className="border-t border-white/10">
       <div className="container py-5 flex flex-col sm:flex-row gap-2 items-center justify-between text-xs opacity-70">
         <p>© {new Date().getFullYear()} Trushna Disinfection Services. All rights reserved.</p>
-        <p>Crafted with care in Berhampur.</p>
+        <p>Serving homes & businesses across Odisha.</p>
       </div>
     </div>
   </footer>
