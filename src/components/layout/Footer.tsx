@@ -11,7 +11,7 @@ export const Footer = () => (
     <div className="container relative py-16 grid gap-12 lg:grid-cols-4">
       <div>
         <div className="bg-white rounded-xl p-3 inline-block mb-4">
-          <img src={logo} alt="Trushna Disinfection Services logo" className="h-20 w-auto" loading="lazy" />
+          <img src={logo} alt="Trushna Disinfecting Services logo" className="h-20 w-auto" loading="lazy" />
         </div>
         <p className="text-sm opacity-80 leading-relaxed">
           Trusted experts in pest control & disinfection across Odisha. Anti-termite treatment backed by a 5-year service warranty.
@@ -72,7 +72,7 @@ export const Footer = () => (
 
     <div className="border-t border-white/10">
       <div className="container py-5 flex flex-col sm:flex-row gap-2 items-center justify-between text-xs opacity-70">
-        <p>© {new Date().getFullYear()} Trushna Disinfection Services. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} Trushna Disinfecting Services. All rights reserved.</p>
         <p>Serving homes & businesses across Odisha.</p>
       </div>
     </div>

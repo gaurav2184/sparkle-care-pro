@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight, ShieldCheck, Sparkles, Star, Smile, Heart, Leaf, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroImg from "@/assets/hero-technician.jpg";
+import heroImg from "@/assets/bann-img-1.jpg";
 import isoBadge from "@/assets/iso-9001.png";
 
 export const Hero = () => {
@@ -34,7 +34,7 @@ export const Hero = () => {
             initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.15 }}
             className="mt-6 text-lg text-muted-foreground max-w-xl leading-relaxed"
           >
-            Trushna Disinfection Services delivers professional pest control & hospital-grade sanitization across Odisha — with an industry-leading 5-year warranty on Anti-Termite treatment.
+            Trushna Disinfecting Services delivers professional pest control & hospital-grade sanitization across Odisha — with an industry-leading 5-year warranty on Anti-Termite treatment.
           </motion.p>
 
           <motion.div
@@ -73,9 +73,9 @@ export const Hero = () => {
 
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.9, delay: 0.2 }}
-          className="relative px-4 sm:px-6 lg:px-0"
+          className="relative px-4 sm:px-6 lg:px-0 lg:w-full lg:max-w-[600px] lg:ml-auto"
         >
-          <div className="relative rounded-[2rem] overflow-hidden shadow-elegant aspect-[4/5] max-w-md mx-auto lg:ml-auto lg:mr-0">
+          <div className="relative rounded-[2rem] overflow-hidden shadow-elegant aspect-[4/5] max-w-md mx-auto lg:w-full lg:max-w-[620px] lg:aspect-[5/4] lg:ml-auto lg:mr-0">
             <img src={heroImg} alt="Professional disinfection technician at work" className="absolute inset-0 h-full w-full object-cover" width={1600} height={1200} />
             <div className="absolute inset-0 bg-gradient-to-tr from-primary/40 via-transparent to-transparent" />
           </div>

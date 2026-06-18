@@ -8,7 +8,7 @@ const Terms = () => (
       <p className="text-muted-foreground mb-8">Last updated: April 2026 — Placeholder content. Replace with your finalised terms.</p>
 
       {[
-        ["1. Acceptance of Terms", "By engaging with Trushna Disinfection Services (TDS), you agree to abide by the terms and conditions outlined herein."],
+        ["1. Acceptance of Terms", "By engaging with Trushna Disinfecting Services (TDS), you agree to abide by the terms and conditions outlined herein."],
         ["2. Service Scope", "Services include pest control, sanitization, disinfection and related treatments as agreed in your service quotation."],
         ["3. Warranty", "Our 5-year warranty applies to specific treatments as detailed in the service contract. Warranty is void if structural changes, water leakage or third-party treatments compromise the original work."],
         ["4. Payment Terms", "Payment is due upon completion of service unless otherwise agreed. We accept cash, UPI, bank transfer and major cards."],

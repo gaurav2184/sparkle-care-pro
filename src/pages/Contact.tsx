@@ -119,7 +119,7 @@ const Contact = () => {
 
           <div className="mt-8 rounded-2xl overflow-hidden border border-border shadow-soft aspect-[16/10]">
             <iframe
-              title="Trushna Disinfection Services office location"
+              title="Trushna Disinfecting Services office location"
               src={config.mapEmbedUrl}
               className="w-full h-full border-0"
               loading="lazy"

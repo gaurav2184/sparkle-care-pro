@@ -40,7 +40,7 @@ export const Navbar = () => {
         <Link to="/" className="flex items-center group">
           <img
             src={logo}
-            alt="Trushna Disinfection Services logo"
+            alt="Trushna Disinfecting Services logo"
             className={cn(
               "w-auto transition-all group-hover:scale-105",
               scrolled ? "h-12 md:h-14" : "h-16 md:h-20",

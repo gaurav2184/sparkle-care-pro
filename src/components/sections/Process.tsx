@@ -5,17 +5,17 @@ const steps = [
   { icon: ClipboardList, title: "Book", desc: "Share your space details — get an instant quote." },
   { icon: Search, title: "Inspect", desc: "Our certified expert audits the area & identifies hotspots." },
   { icon: SprayCan, title: "Treat", desc: "Targeted, safe treatment with the right grade chemicals." },
-  { icon: ShieldCheck, title: "Warranty", desc: "Up to 5 years of follow-up coverage on every service." },
+  // { icon: ShieldCheck, title: "Warranty", desc: "Up to 5 years of follow-up coverage on every service." },
 ];
 
 export const Process = () => (
   <section className="container py-24">
     <div className="text-center max-w-2xl mx-auto mb-16">
       <p className="text-sm font-semibold uppercase tracking-widest text-accent mb-3">How it works</p>
-      <h2 className="font-display text-4xl md:text-5xl font-extrabold text-primary">A simple 4-step process</h2>
+      <h2 className="font-display text-4xl md:text-5xl font-extrabold text-primary">A simple 3-step process</h2>
     </div>
 
-    <div className="relative grid md:grid-cols-4 gap-8">
+    <div className="relative grid md:grid-cols-3 gap-8">
       <div aria-hidden className="hidden md:block absolute top-8 left-[12.5%] right-[12.5%] h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
       {steps.map((s, i) => (
         <motion.div

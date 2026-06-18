@@ -1,13 +1,18 @@
+import emailjs from "@emailjs/browser";
+
+// Initialize EmailJS
+emailjs.init(import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY);
+
 // Central business config. Replace placeholder values with real ones.
 export const config = {
-  brand: "Trushna Disinfection Services",
+  brand: "Trushna Disinfecting Services",
   phone: "+917381214444",
   phoneDisplay: "+91 73812 14444",
   whatsapp: "917381214444", // digits only, no +
-  whatsappMessage: "Hi TDS, I'd like to know more about your pest control / disinfection services.",
+  whatsappMessage: "Hi TDS, I'd like to know more about your pest control / disinfecting services.",
   email: "trushnaventures@gmail.com",
   address: {
-    line1: "Office address line 1 (share with us)",
+    line1: "Gopabandhu Nagar 1st Line, Hillpatna",
     line2: "Berhampur, Ganjam, Odisha 760001",
   },
   // Paste a Google Maps embed URL here (Share → Embed a map → copy `src`)
@@ -35,9 +40,12 @@ export const config = {
       city: "entry.888888888",
       date: "entry.999999999",
       area: "entry.101010101",
+      specialInstructions: "entry.131313131",
       source: "entry.121212121",
     },
   },
+  // Google Sheets webhook (via Google Apps Script)
+  googleSheetsWebhook: import.meta.env.VITE_GOOGLE_SHEETS_WEBHOOK_URL || "",
 };
 
 export const submitToBackends = async (
@@ -68,6 +76,42 @@ export const submitToBackends = async (
       fetch(config.googleForm.formResponseUrl, { method: "POST", mode: "no-cors", body }).catch(() => undefined),
     );
   }
+
+  // 3) Google Sheets (via webhook) — append to spreadsheet
+  if (config.googleSheetsWebhook) {
+    const timestamp = new Date().toISOString();
+    tasks.push(
+      fetch(config.googleSheetsWebhook, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "text/plain;charset=utf-8" },
+        body: JSON.stringify({
+          ...payload,
+          timestamp,
+          formType: source,
+        }),
+      }).catch(() => undefined),
+    );
+  }
+
+  // 4) EmailJS (send to account email)
+  tasks.push(
+    emailjs
+      .send(
+        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+        {
+          from_name: payload.name,
+          to_name: "Sitesh Kumar Raulo",
+          from_email: payload.email,
+          to_email: "sitesh.raulo.pj@gmail.com",
+          // Send all payload fields so they're available in the template
+          ...payload,
+        },
+        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY,
+      )
+      .catch(() => undefined),
+  );
 
   await Promise.allSettled(tasks);
 };
